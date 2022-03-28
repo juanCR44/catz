@@ -1,0 +1,267 @@
+{
+  "version": "0.1.0",
+  "name": "gametest",
+  "instructions": [
+    {
+      "name": "fundSol",
+      "accounts": [
+        {
+          "name": "payerAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "ownerWallet",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pdaAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "data",
+          "type": {
+            "defined": "SendInfo"
+          }
+        }
+      ]
+    },
+    {
+      "name": "depositSolLose",
+      "accounts": [
+        {
+          "name": "payerAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "treasuryAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "bufferAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pdaAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pdaTreasury",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "data",
+          "type": {
+            "defined": "SendInfo"
+          }
+        }
+      ]
+    },
+    {
+      "name": "depositSolWinFirst",
+      "accounts": [
+        {
+          "name": "payerAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "treasuryAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "bufferAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pdaAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pdaTreasury",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pdaTreasuryHandler",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "data",
+          "type": {
+            "defined": "SendInfo"
+          }
+        }
+      ]
+    },
+    {
+      "name": "depositSolWinSecond",
+      "accounts": [
+        {
+          "name": "payerAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "treasuryAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "bufferAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pdaAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pdaTreasury",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pdaTreasuryHandler",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "data",
+          "type": {
+            "defined": "SendInfo"
+          }
+        }
+      ]
+    },
+    {
+      "name": "gamePlay",
+      "accounts": [
+        {
+          "name": "account",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "payerAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "treasuryAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pdaAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "pdaTreasury",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "data",
+          "type": {
+            "defined": "SendBlockHash"
+          }
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "SendInfo",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "lamports",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SendBlockHash",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "blockhash",
+            "type": "string"
+          },
+          {
+            "name": "lamports",
+            "type": "u64"
+          },
+          {
+            "name": "timestamp",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DidWin",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "didWin",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ]
+}
