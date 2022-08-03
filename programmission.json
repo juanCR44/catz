@@ -152,6 +152,68 @@
       ]
     },
     {
+      "name": "createUserAccount",
+      "accounts": [
+        {
+          "name": "account",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "accountAuthority",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "userBump",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "checkAccount",
+      "accounts": [
+        {
+          "name": "account",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "accountAuthority",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "userBump",
+          "type": "u8"
+        }
+      ]
+    },
+    {
       "name": "createJourneyAccount",
       "accounts": [
         {
@@ -170,6 +232,11 @@
           "isSigner": false
         },
         {
+          "name": "user",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
           "name": "rent",
           "isMut": false,
           "isSigner": false
@@ -184,11 +251,222 @@
         {
           "name": "journeyBump",
           "type": "u8"
+        },
+        {
+          "name": "userBump",
+          "type": "u8"
+        },
+        {
+          "name": "type",
+          "type": "u64"
         }
       ]
     },
     {
       "name": "initJourney",
+      "accounts": [
+        {
+          "name": "account",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "accountAuthority",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenWallet",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "mintOfTokenBeingSent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "walletToWithdrawFrom",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "type",
+          "type": "u64"
+        },
+        {
+          "name": "userBump",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "initJourneyExist",
+      "accounts": [
+        {
+          "name": "account",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "accountAuthority",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenWallet",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "mintOfTokenBeingSent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "walletToWithdrawFrom",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "walletBump",
+          "type": "u8"
+        },
+        {
+          "name": "userBump",
+          "type": "u8"
+        },
+        {
+          "name": "type",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "checkJourney",
+      "accounts": [
+        {
+          "name": "account",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "accountAuthority",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenWallet",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "mintOfTokenBeingSent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "walletToDepositTo",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "walletBump",
+          "type": "u8"
+        },
+        {
+          "name": "userBump",
+          "type": "u8"
+        },
+        {
+          "name": "type",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "finishJourney",
       "accounts": [
         {
           "name": "account",
@@ -222,68 +500,6 @@
           "type": "u64"
         }
       ]
-    },
-    {
-      "name": "checkJourney",
-      "accounts": [
-        {
-          "name": "account",
-          "isMut": true,
-          "isSigner": false
-        },
-        {
-          "name": "userAccount",
-          "isMut": true,
-          "isSigner": true
-        },
-        {
-          "name": "accountAuthority",
-          "isMut": true,
-          "isSigner": false
-        },
-        {
-          "name": "rent",
-          "isMut": false,
-          "isSigner": false
-        },
-        {
-          "name": "systemProgram",
-          "isMut": false,
-          "isSigner": false
-        }
-      ],
-      "args": []
-    },
-    {
-      "name": "finishJourney",
-      "accounts": [
-        {
-          "name": "account",
-          "isMut": true,
-          "isSigner": false
-        },
-        {
-          "name": "userAccount",
-          "isMut": true,
-          "isSigner": true
-        },
-        {
-          "name": "accountAuthority",
-          "isMut": true,
-          "isSigner": false
-        },
-        {
-          "name": "rent",
-          "isMut": false,
-          "isSigner": false
-        },
-        {
-          "name": "systemProgram",
-          "isMut": false,
-          "isSigner": false
-        }
-      ],
-      "args": []
     }
   ],
   "accounts": [
@@ -353,8 +569,50 @@
             "type": "bool"
           },
           {
+            "name": "transfered",
+            "type": "bool"
+          },
+          {
             "name": "rewards",
             "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UserAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "accountAuthority",
+            "type": "publicKey"
+          },
+          {
+            "name": "userAccount",
+            "type": "publicKey"
+          },
+          {
+            "name": "missions",
+            "type": {
+              "array": [
+                "u8",
+                6
+              ]
+            }
+          },
+          {
+            "name": "startedmissions",
+            "type": {
+              "array": [
+                "u8",
+                6
+              ]
+            }
           },
           {
             "name": "bump",
@@ -372,6 +630,6 @@
     }
   ],
   "metadata": {
-    "address": "msnwjFWjy6mRd956v6aREXtoJJADMhCxLBL3WDs24um"
+    "address": "1stsoEidapToKDe1BRzyuYqUDQ747GbX8Y19yE6nxH2"
   }
 }
