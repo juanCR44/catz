@@ -1,0 +1,174 @@
+{
+  "version": "0.1.0",
+  "name": "casinogame",
+  "instructions": [
+    {
+      "name": "testTreasury",
+      "accounts": [
+        {
+          "name": "treasuryPda",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "treasury",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "authorityAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "treasuryBump",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "firstStep",
+      "accounts": [
+        {
+          "name": "gamePda",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authorityAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "playerAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "gameBump",
+          "type": "u8"
+        },
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "secondStep",
+      "accounts": [
+        {
+          "name": "playerPda",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "gamePda",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "treasury",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "authorityAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "playerAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "playerBump",
+          "type": "u8"
+        },
+        {
+          "name": "gameBump",
+          "type": "u8"
+        },
+        {
+          "name": "played",
+          "type": "bool"
+        },
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "thirdStep",
+      "accounts": [
+        {
+          "name": "playerPda",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authorityAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "playerAccount",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "playerBump",
+          "type": "u8"
+        },
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "TreasuryAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ]
+}
